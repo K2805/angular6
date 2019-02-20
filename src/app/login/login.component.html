@@ -1,0 +1,7 @@
+<form class="login" name="lin"  #lin="ngForm"(ngSubmit)="checkLogin(lin)">
+  <p *ngIf="showError" style="color:red"> Please enter a valid username / password</p>
+    <h1 class="login-title">Login</h1>
+    <input type="text" class="login-input" name="username" id="username" [(ngModel)]="username" #userName=ngModel placeholder="Email Adress" autofocus>
+    <input type="password" class="login-input" name="password" id="password"  [(ngModel)]="password" placeholder="Password">
+    <a (click)="checkLogin()"> <input type="submit" value="Login" class="login-button" ></a>
+  </form>
